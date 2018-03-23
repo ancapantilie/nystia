@@ -7,7 +7,6 @@ Version: 1.0.0
 */
 
 /* ===== Home ===== */
-
 /*Carousel*/
 .home .carousel-inner .hestia-big-title-content .hestia-title{
     font-size:52px;
@@ -106,7 +105,6 @@ Version: 1.0.0
     margin: unset;
     max-height: unset;
     float: left;
-
 }
 
 .hestia-testimonials .card-testimonial .card-title {
@@ -174,7 +172,7 @@ Version: 1.0.0
 }
 
 /*Removing effects */
-.home .hestia-blog-content .content {
+.home .hestia-blog-content  .content {
     transform: translateY(-100px);
 }
 
@@ -447,6 +445,28 @@ Version: 1.0.0
     transform: unset;
 }
 
+.single-product .type-product .price {
+    border-bottom: none;
+}
+
+.woocommerce .related.products .content {
+    background:#f0f0f0;
+}
+
+.woocommerce .related.products .card {
+    box-shadow: none;
+}
+
+.woocommerce .related.products .product > .card > .card-image {
+    box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5),
+                0 5px 25px 0 rgba(0, 0, 0, 0.12),
+                0 10px 10px -5px rgba(0, 0, 0, 0);
+}
+
+ div.woocommerce-message {
+    padding: 20px 15px 10px 35px !important;
+}
+
 /*=====Cart Page=====*/
 /*Cart Styles*/
 .woocommerce-cart .main .blog-post h1.hestia-title {
@@ -507,12 +527,23 @@ Version: 1.0.0
 
 .blog-post .section-text .woocommerce-message,
 .blog-post .section-text .woocommerce-message a {
-    background-color: #a3e7fc;
+    background-color: #a30000;
     color: #ffffff;
 }
 
 single-product.blog-post .woocommerce-message {
     padding-bottom: 0;
+}
+
+.woocommerce-cart table.shop_table td.actions input[type="submit"].button,
+.woocommerce-cart table.shop_table td.actions input[type="submit"].button:hover {
+    background: #00afb5;
+    color: #fff;
+    border: none;
+}
+
+.woocommerce-cart table.shop_table td.actions input[type="submit"].button:hover {
+    opacity: 0.8;
 }
 /*======Removing boxed layout=====*/
 .main-raised {
@@ -683,7 +714,9 @@ single-product.blog-post .woocommerce-message {
 }
 
 .archive.woocommerce .products .card-product .card-image {
-    box-shadow: none;
+    box-shadow:0 15px 35px -15px rgba(0, 0, 0, 0.5),
+               0 5px 25px 0 rgba(0, 0, 0, 0.12),
+               0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 .woocommerce .card.card-product {
@@ -706,7 +739,6 @@ single-product.blog-post .woocommerce-message {
 /*Button*/
 .woocommerce .shop-sidebar button,
 .woocommerce .shop-sidebar button.button,
-.woocommerce .section-text .onsale,
 .woocommerce .widget_search input[type="submit"],
 .woocommerce .widget_search button,
 .single-post .footer button,
@@ -726,12 +758,7 @@ single-product.blog-post .woocommerce-message {
 .archive .footer button,
 .archive .blog-sidebar input[type="submit"],
 .archive .blog-sidebar button {
-    background: -moz-linear-gradient(218deg, #26c485 0%, #55F2F0 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #55F2F0), color-stop(100%, #26c485)); /* safari4+,chrome */
-    background: -webkit-linear-gradient(218deg, #26c485 0%, #55F2F0 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(218deg, #26c485 0%, #55F2F0 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(218deg, #26c485 0%, #55F2F0 100%); /* ie10+ */
-    background: linear-gradient(232deg, #26c485 0%, #55F2F0 100%); /* w3c */
+    background: #00afb5;
 }
 
 .woocommerce .shop-sidebar button:hover,
@@ -912,6 +939,10 @@ single-product.blog-post .woocommerce-message {
     background-color: #f0f0f0;
 }
 
+.woocommerce.wocommerce-page .section-text div.woocommerce-message {
+    padding: 20px 15px 10px 30px !important;
+}
+
 /*=====Single Post Page=====*/
 /*Font styles*/
 .blog-post .section-text .hestia-title.title-in-content{
@@ -1025,11 +1056,6 @@ single-product.blog-post .woocommerce-message {
     -webkit-box-shadow: none;
 }
 /*=====Blog page=====*/
-/*Make side-bar disappear*/
-/*.blog .blog-sidebar {*/
-    /*display: none;*/
-/*}*/
-
 /*Shadow effect on every post*/
 .blog .main-raised {
     background-color: #f2f2f2;
@@ -1053,7 +1079,6 @@ single-product.blog-post .woocommerce-message {
 
 .blog .hestia-blogs article:nth-child(2n){
     position: relative;
-    /*left: 280px;*/
     left:50px;
 }
 
@@ -1182,7 +1207,7 @@ single-product.blog-post .woocommerce-message {
     }
 
     /*Blog page*/
-    .blog .hestia-blogs .blog-posts-wrap   article:nth-child(2n),
+    .blog .hestia-blogs .blog-posts-wrap  article:nth-child(2n),
     .blog .hestia-blogs  .blog-posts-wrap article:nth-child(2n-1){
         left: 0;
     }
