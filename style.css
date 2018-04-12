@@ -1068,8 +1068,16 @@ single-product.blog-post .woocommerce-message {
     margin-left: -14px;
 }
 
+ .blog .hestia-blogs .card .card-image {
+     box-shadow: none;
+     -webkit-box-shadow: none;
+ }
 .blog .category.text-info {
     display: none;
+}
+
+.blog .hestia-blogs .card-plain .author {
+    padding-top: 40px;
 }
 
 /*Post layout*/
@@ -1084,9 +1092,15 @@ single-product.blog-post .woocommerce-message {
 
 .blog .hestia-blogs article:nth-child(2n-1){
     position: relative;
-    /*left: 0px;*/
     left: -260px;
 }
+
+/*Display meta entry style*/
+.blog .card-plain .author-with-avatar {
+    float: left;
+    display: contents;
+}
+
 /*=====Archives=====*/
 .archive .hestia-blogs article:nth-child(2n-1){
     position: relative;
@@ -1151,6 +1165,8 @@ single-product.blog-post .woocommerce-message {
     .navbar .navbar-nav > li {
         margin-right: 0;
     }
+
+
 }
 
 @media only screen  and (max-width: 992px){
@@ -1189,6 +1205,11 @@ single-product.blog-post .woocommerce-message {
         max-height: 150px;
         line-height: 1.2em;
     }
+
+    .blog .hestia-blogs .card-plain .author {
+        padding-top: unset;
+    }
+
 }
 
 @media only screen  and (max-width:760px){
@@ -1235,12 +1256,26 @@ single-product.blog-post .woocommerce-message {
     .blog .hestia-blogs .blog-posts-wrap article .row:nth-child(2n-1){
         margin:0 auto;
     }
+
+
+    .blog .hestia-blogs .card-plain .author .number-of-comments {
+        display: none;
+    }
+
+    .blog .hestia-blogs .card-plain .author {
+        padding-bottom: 5px;
+    }
 }
 
 @media only screen and (max-width : 480px){
     /*Blog page*/
     .blog .hestia-blogs .blog-posts-wrap article .row {
         width: auto;
+    }
+
+    .blog .hestia-blogs .card-plain .author .entry-date,
+    .blog .hestia-blogs .card-plain .author .number-of-comments {
+        display: none;
     }
 
     /*Shop page*/
@@ -1267,6 +1302,8 @@ single-product.blog-post .woocommerce-message {
     .blog .hestia-blogs .col-md-8 {
         padding: unset;
     }
+
+
 
     /*Single post page*/
     .blog-post .related-posts .card-blog .blog-item-title-link {

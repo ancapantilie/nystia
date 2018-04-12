@@ -149,3 +149,98 @@ function nystia_header_background_default() {
 }
 add_filter( 'hestia_big_title_background_default', 'nystia_header_background_default' );
 
+/**
+ * Get the number of comments for a post
+ *
+ * @return string - number of comments
+ */
+function cwp_post_number_of_comments(){
+    $comments_number = get_comments_number();
+    if( 1 === (int)$comments_number ) {
+        return sprintf( _x( 'One comment', 'comments_title', 'cwp') );
+    } else if ( 0 === (int)$comments_number ) {
+        return sprintf( _x( 'No comments', 'comments_title', 'cwp') );
+    } else  {
+        return sprintf(
+            _nx(
+                '%1$s Comment',
+                '%1$s comments',
+                $comments_number,
+                'comments title',
+                'cwp'
+            ),
+            number_format_i18n($comments_number)
+        );
+    }
+}
+
+/**
+ * Display entry meta for post
+ *
+ * @param bool $show_gravatar - show post's author's image
+ */
+function nystia_display_entry_data( $show_gravatar = false ) {
+
+    $categories_list = get_the_category_list( ', ');
+
+    $m_time_g = get_the_modified_time( 'F j, Y' );
+    $p_time = get_the_time('F j, Y');
+    $date = sprintf(
+        '<time class="entry-date" itemprop="dateModified" datetime="'. $m_time_g.'"> • On %1$s</time><meta itemprop="datePublished" content="' . $p_time.'">',
+        $p_time
+    );
+
+    $author = sprintf('<span itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span class="vcard author">%1$s</span>', get_the_author());
+	$author_email = get_the_author_meta ('user_email');
+	$avatar = get_avatar($author_email);
+	$post_comments = cwp_post_number_of_comments();
+
+
+	if ( $categories_list && $show_gravatar ) {
+        $wrapping_text = '<span class = "author"><div class = "author-with-avatar">%1$s</div><span class = "post-author"<b>%2$s</b></span></span> • In %3$s %4$s <span class = "number-of-comments" > • %5$s </span>';
+    } else if ( $show_gravatar ) {
+	    $wrapping_text = '<span class = "author"><div class = "author-with-avatar">%1$s</div><span class = "post-author"<b>%2$s</b></span></span> %4$s <span class = " number-of-comments" > • %5$s </span>';
+	} else if ($categories_list) {
+	    $wrapping_text = '<span class = "author"><div class = "vcard author"> by <b>%2$s</b> </div></span> • In %3$s %4$s <span class = "number-of-comments" > • %5$s </span>';
+    } else {
+	    $wrapping_text = '<span class = "author"><div class = "vcard author"> by <b>%2$s</b> </div></span> %4$s <span class = "number-of-comments" > • %5$s </span>';
+    }
+
+    printf (
+            $wrapping_text,
+            $avatar,
+            $author,
+            $categories_list,
+            $date,
+            $post_comments
+    );
+
+}
+
+add_filter('hestia_blog_post_meta', 'nystia_display_entry_data');
+
+/**
+ * Define excerpt length.
+ *
+ * @since 1.0.0
+ */
+
+function nystia_excerpt_length( $length ) {
+    if ( is_admin() ) {
+        return $length;
+    }
+    if ( ( 'page' === get_option( 'show_on_front' ) ) || is_single() ) {
+        return 20;
+    } elseif ( is_home() ) {
+        if ( is_active_sidebar( 'sidebar-1' ) ) {
+            return 40;
+        } else {
+            return 75;
+        }
+    } else {
+        return 50;
+    }
+}
+
+add_filter( 'excerpt_length', 'nystia_excerpt_length', 9999 );
+
