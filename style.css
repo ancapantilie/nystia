@@ -1056,6 +1056,20 @@ single-product.blog-post .woocommerce-message {
     -webkit-box-shadow: none;
 }
 /*=====Blog page=====*/
+/*Font Styles*/
+.blog .blog-posts-wrap article .card-title{
+    font-size: 25px;
+    font-weight: 400;
+    padding-top: 5px;
+    color: black;
+}
+
+.blog .blog-posts-wrap article .card-description {
+    font-size: 15px;
+    font-weight: normal;
+    color: #9A9A9A;
+}
+
 /*Shadow effect on every post*/
 .blog .main-raised {
     background-color: #f2f2f2;
@@ -1065,7 +1079,6 @@ single-product.blog-post .woocommerce-message {
     background-color: #FFFFFF;
     border-radius: 6px;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.3);
-    margin-left: -14px;
 }
 
  .blog .hestia-blogs .card .card-image {
@@ -1077,22 +1090,27 @@ single-product.blog-post .woocommerce-message {
 }
 
 .blog .hestia-blogs .card-plain .author {
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
-/*Post layout*/
-.blog  .card-image {
-    margin-left: -16px;
+ /*Page layout*/
+.col-ms-6.col-sm-6 {
+    width: unset;
 }
 
-.blog .hestia-blogs article:nth-child(2n){
-    position: relative;
-    left:50px;
+.blog .hestia-blogs article.card {
+    width:48%;
 }
 
-.blog .hestia-blogs article:nth-child(2n-1){
-    position: relative;
-    left: -260px;
+.blog .hestia-blogs .blog-posts-wrap article.card-plain:nth-of-type(2n-1) {
+    margin-right: 30px;
+}
+.blog .hestia-blogs article .number-of-comments {
+    display: none;
+}
+
+.blog .card-plain .row {
+    box-shadow: none;
 }
 
 /*Display meta entry style*/
@@ -1153,20 +1171,6 @@ single-product.blog-post .woocommerce-message {
         top: -190px;
     }
 
-    /*Blog page*/
-    .blog .hestia-blogs .blog-posts-wrap article:nth-child(2n){
-        left: 224px;
-    }
-
-    .blog .hestia-blogs .blog-posts-wrap article .row:nth-child(2n-1){
-        margin-right: -93px;
-    }
-
-    .navbar .navbar-nav > li {
-        margin-right: 0;
-    }
-
-
 }
 
 @media only screen  and (max-width: 992px){
@@ -1181,38 +1185,14 @@ single-product.blog-post .woocommerce-message {
         top: -460px;
     }
 
-    /*Blog page*/
-    .blog .hestia-blogs article .card-title {
-        font-size: 20px;
-    }
-
-    .blog .hestia-blogs article .card-description,
-    .blog .hestia-blogs article .author {
-        font-size: 12px;
-    }
-
-    .blog .hestia-blogs .blog-posts-wrap article:nth-child(2n-1){
-        left: -113px;
-    }
-
-    .blog .hestia-blogs .blog-posts-wrap article:nth-child(2n){
-        left: 58px;
-    }
-
-    .blog .hestia-blogs .blog-posts-wrap article .row {
-        word-wrap: break-word;
-        overflow: hidden;
-        max-height: 150px;
-        line-height: 1.2em;
-    }
-
     .blog .hestia-blogs .card-plain .author {
         padding-top: unset;
     }
 
 }
 
-@media only screen  and (max-width:760px){
+@media only screen  and (max-width:768px){
+
     /*Single blog page post*/
     .blog-post .related-posts .category.text-info a,
     .blog-post .related-posts .blog-item-title-link {
@@ -1225,36 +1205,6 @@ single-product.blog-post .woocommerce-message {
 
     .single-post.blog-post ul.children {
         border-left: unset;
-    }
-
-    /*Blog page*/
-    .blog .hestia-blogs .blog-posts-wrap  article:nth-child(2n),
-    .blog .hestia-blogs  .blog-posts-wrap article:nth-child(2n-1){
-        left: 0;
-    }
-
-    .blog .hestia-blogs .blog-posts-wrap article .row {
-        word-wrap: break-word;
-        overflow: visible;
-        max-height: none;
-    }
-
-    .blog .hestia-blogs .blog-posts-wrap  article .row {
-        width: 359px;
-        margin: 0 auto;
-    }
-
-    .blog .hestia-blogs .blog-posts-wrap article .col-ms-7.col-sm-7,
-    .blog .hestia-blogs .blog-posts-wrap article .col-ms-5.col-sm-5 {
-        width: auto;
-    }
-
-    .blog .hestia-blogs .card-image {
-        margin-right: -16px;
-    }
-
-    .blog .hestia-blogs .blog-posts-wrap article .row:nth-child(2n-1){
-        margin:0 auto;
     }
 
 
@@ -1294,16 +1244,6 @@ single-product.blog-post .woocommerce-message {
 }
 
 @media only screen and (max-width: 320px){
-    /*Blog page*/
-    .blog .hestia-blogs .blog-posts-wrap article .row {
-        width: 200px;
-    }
-
-    .blog .hestia-blogs .col-md-8 {
-        padding: unset;
-    }
-
-
 
     /*Single post page*/
     .blog-post .related-posts .card-blog .blog-item-title-link {
