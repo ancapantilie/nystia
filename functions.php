@@ -197,11 +197,11 @@ function nystia_display_entry_data( $show_gravatar = false ) {
 
 
 	if ( $categories_list && $show_gravatar ) {
-        $wrapping_text = '<span class = "author"><div class = "author-with-avatar">%1$s</div><span class = "post-author"<b>%2$s</b></span></span> • In %3$s %4$s <span class = "number-of-comments" > • %5$s </span>';
+        $wrapping_text = '<span class = "author"><div class = "author-with-avatar">%1$s</div><span class = "post-author"<b>%2$s</b></span></span><span class="avatar-category"> • In %3$s </span> %4$s <span class = "number-of-comments" > • %5$s </span>';
     } else if ( $show_gravatar ) {
 	    $wrapping_text = '<span class = "author"><div class = "author-with-avatar">%1$s</div><span class = "post-author"<b>%2$s</b></span></span> %4$s <span class = " number-of-comments" > • %5$s </span>';
 	} else if ($categories_list) {
-	    $wrapping_text = '<span class = "author"><div class = "vcard author"> by <b>%2$s</b> </div></span> • In %3$s %4$s <span class = "number-of-comments" > • %5$s </span>';
+	    $wrapping_text = '<span class = "author"><div class = "vcard author"> by <b>%2$s</b> </div></span><span class="avatar-category">• In %3$s</span> %4$s <span class = "number-of-comments" > • %5$s </span>';
     } else {
 	    $wrapping_text = '<span class = "author"><div class = "vcard author"> by <b>%2$s</b> </div></span> %4$s <span class = "number-of-comments" > • %5$s </span>';
     }
