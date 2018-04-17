@@ -229,11 +229,11 @@ function nystia_excerpt_length( $length ) {
     if ( is_admin() ) {
         return $length;
     }
-    if ( ( 'page' === get_option( 'show_on_front' ) ) || is_single() ) {
-        return 20;
-    } elseif ( is_home() ) {
+    if  ( 'page' === get_option( 'show_on_front' ) && ! is_home() )   {
+        return 0;
+    } elseif ( is_home() || is_single()) {
         if ( is_active_sidebar( 'sidebar-1' ) ) {
-            return 40;
+            return 20;
         } else {
             return 75;
         }

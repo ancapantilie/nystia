@@ -154,28 +154,12 @@ Version: 1.0.0
     color: #333;
 }
 
-.home .hestia-blogs .text-center .description {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0 0 10px;
-    color: #333;
+.home .hestia-blogs .card .category,
+.home .hestia-blogs .card .card-title,
+.home .hestia-blogs .card .card-description {
+    text-align: center;
 }
-
-.home  .hestia-blogs .hestia-blog-content .card-description {
-    display:none;
-}
-
-.home .hestia-blogs .hestia-blog-content .content .category a,
-.home .hestia-blogs .hestia-blog-content .content .blog-item-title-link {
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
-}
-
 /*Removing effects */
-.home .hestia-blog-content  .content {
-    transform: translateY(-100px);
-}
-
 .home a:not(.btn),
 .home a:not(.btn):hover,
 .hestia-blogs article .card-image img,
@@ -192,6 +176,80 @@ Version: 1.0.0
 .home .hestia-blog-content .card-image a {
     opacity: 0.8;
     filter: alpha(opacity=100);
+}
+.home .hestia-blogs .card a.moretag {
+    border: 1px solid;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.home .hestia-blogs .card .card-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: 400;
+}
+.home .hestia-blogs article:nth-child(6n+1) .card a.moretag {
+    color: #be5000;
+}
+
+.home .hestia-blogs article:nth-child(6n+2) .card a.moretag {
+    color: #00bcd4;
+}
+
+.home .hestia-blogs article:nth-child(6n+3) .card a.moretag {
+    color: #f44336;
+}
+
+.home .hestia-blogs article:nth-child(6n+4) .card a.moretag {
+    color: #ff9800;
+}
+
+.home .hestia-blogs article:nth-child(6n+5) .card a.moretag {
+    color: #e91e63;
+}
+
+.home .hestia-blogs article:nth-child(6n) .card a.moretag {
+    color: #4caf50;
+}
+
+.home .hestia-blogs a:not(.btn):hover {
+    opacity: 1;
+}
+
+.home .hestia-blogs article:nth-child(6n+1) .card a.moretag:hover {
+    color: #fff;
+    background: #be5000;
+}
+
+.home .hestia-blogs article:nth-child(6n+2) .card a.moretag:hover {
+    color: #fff;
+    background: #00bcd4;
+}
+
+.home .hestia-blogs article:nth-child(6n+3) .card a.moretag:hover {
+     color: #fff;
+     background: #f44336;
+ }
+
+.home .hestia-blogs article:nth-child(6n+4) .card a.moretag:hover {
+    color: #fff;
+    background: #ff9800;
+}
+
+.home .hestia-blogs article:nth-child(6n+5) .card a.moretag:hover {
+    color: #fff;
+    background: #e91e63;
+}
+
+.home .hestia-blogs article:nth-child(6n) .card a.moretag:hover {
+    color: #fff;
+    background: #4caf50;
+}
+
+/*Contact us*/
+.home .hestia-contact .card-contact .header {
+    margin: 0;
+    box-shadow:none;
 }
 
 /*Products*/
@@ -836,6 +894,7 @@ single-product.blog-post .woocommerce-message {
     color: #333333;
 }
 
+.single-post .blog-sidebar .buttons a,
 .archive .blog-sidebar .buttons a,
 .blog .blog-sidebar .buttons a {
     color: #ffffff;
@@ -1159,40 +1218,52 @@ single-product.blog-post .woocommerce-message {
     color: #9A9A9A;
 }
 
+.home .hestia-blogs article:nth-child(6n+1) .category a,
  .archive .hestia-blogs article:nth-child(6n+1) .category a {
     background: #be5000;
     color: #ffffff;
-    padding: 2px 2px;
+    padding: 2px 3px;
+    border-radius: 3px;
 }
 
+.home .hestia-blogs article:nth-child(6n+2) .category a,
 .archive .hestia-blogs article:nth-child(6n+2) .category a {
     background: #00bcd4;
     color: #ffffff;
-    padding: 2px 2px;
+    padding: 2px 3px;
+    border-radius: 3px;
 }
 
+.home .hestia-blogs article:nth-child(6n+3) .category a,
 .archive .hestia-blogs article:nth-child(6n+3) .category a {
     background: #f44336;
     color: #ffffff;
-    padding: 2px 2px;
+    padding: 2px 3px;
+    border-radius: 3px;
 }
 
+.home .hestia-blogs article:nth-child(6n+4) .category a,
 .archive .hestia-blogs article:nth-child(6n+4) .category a {
     background: #ff9800;
     color: #ffffff;
-    padding: 2px 2px;
+    padding: 2px 3px;
+    border-radius: 3px;
 }
 
+.home .hestia-blogs article:nth-child(6n+5) .category a,
 .archive .hestia-blogs article:nth-child(6n+5) .category a {
     background: #e91e63;
     color: #ffffff;
-    padding: 2px 2px;
+    padding: 2px 3px;
+    border-radius: 3px;
 }
 
+.home .hestia-blogs article:nth-child(6n) .category a,
 .archive .hestia-blogs article:nth-child(6n) .category a {
     background: #4caf50;
     color: #ffffff;
-    padding: 2px 2px;
+    padding: 2px 3px;
+    border-radius: 3px;
 }
 
 /*=====Checkout page======*/
