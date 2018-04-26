@@ -229,7 +229,7 @@ function nystia_excerpt_length( $length ) {
     if ( is_admin() ) {
         return $length;
     }
-    if  ( 'page' === get_option( 'show_on_front' ) && ! is_home() )   {
+    if  ( 'page' === get_option( 'show_on_front' ) && is_front_page() )   {
         return 0;
     } elseif ( is_home() || is_single()) {
         if ( is_active_sidebar( 'sidebar-1' ) ) {
@@ -238,9 +238,23 @@ function nystia_excerpt_length( $length ) {
             return 75;
         }
     } else {
-        return 50;
+        return 20;
     }
 }
 
 add_filter( 'excerpt_length', 'nystia_excerpt_length', 9999 );
 
+/**
+ * Enqueue scripts and styles.
+ *
+ * @since 1.0.0
+ */
+
+function nystia_scripts() {
+    if ( is_category() || is_search() || is_archive() || is_home() ) {
+
+        wp_enqueue_script( 'nystia-masonry-call', get_template_directory_uri() . '/js/masonry-call', array( 'masonry' ), '20120206', true );
+    }
+
+}
+add_action( 'wp_enqueue_scripts', 'nystia_scripts' );
