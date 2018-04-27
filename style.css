@@ -134,6 +134,9 @@ Version: 1.0.0
     padding-right: 10px;
 }
 
+.home .hestia-testimonials-content .card-testimonial {
+    height: 200px;
+}
 /*Subscribe*/
 .home .hestia-subscribe .text-center .title {
     font-size: 36px;
@@ -262,7 +265,9 @@ Version: 1.0.0
     margin: 0;
     box-shadow:none;
 }
-
+ .home .hestia-contact .card-contact .card-title {
+     font-weight: 200;
+ }
 /*Products*/
 .home .hestia-shop-content .card-description,
 .home  .hestia-shop-content .card .category,
@@ -543,8 +548,14 @@ div.woocommerce-message {
     margin: 0 0 3em;
 }
 
+.woocommerce .summary .cart.form-group {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
 
-
+.woocommerce.single-product.woocommerce-page  .product.type-product form.cart {
+    padding: 20px 0 0 0;
+}
 /*=====Cart Page=====*/
 /*Cart Styles*/
 .woocommerce-cart .main .blog-post h1.hestia-title {
@@ -792,8 +803,24 @@ single-product.blog-post .woocommerce-message {
     box-shadow: none;
 }
 
+.woocommerce-page .blog-post .products .content {
+    background: #f0f0f0;
+}
+
+.woocommerce-page .blog-post .products .product:hover {
+    box-shadow:
+            0 2px 2px 0 rgba(0, 0, 0, 0.14),
+            0 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+/*Shop sidebar*/
+.woocommerce-page .shop-sidebar-wrapper .shop-sidebar {
+    background: #f0f0f0;
+}
+
 .woocommerce.archive.woocommerce-page .main{
-    background: #ffffff;
+    background: #f0f0f0;
 }
 
 .woocommerce .added_to_cart.wc-forward {
@@ -930,6 +957,25 @@ ul.product_list_widget li:hover img {
 .archive .blog-sidebar .buttons a,
 .blog .blog-sidebar .buttons a {
     color: #ffffff;
+}
+
+ .woocommerce-page .shop-sidebar-wrapper .widget_shopping_cart_content a.button{
+     font-size: 12px;
+     width: 47%;
+ }
+ .woocommerce-page .shop-sidebar-wrapper .woocommerce-mini-cart__buttons  .button.wc-forward,
+ .woocommerce-page .shop-sidebar-wrapper .woocommerce-mini-cart__buttons  .button.checkout.wc-forward {
+     padding: 10px 10px 10px 15px;
+
+ }
+
+.woocommerce.woocommerce-page div[id^=woocommerce_widget_cart].widget .buttons .button:hover {
+    box-shadow: none;
+}
+
+.woocommerce.woocommerce-page ul.product_list_widget li.mini_cart_item a,
+ul.product_list_widget li.mini_cart_item a {
+    margin-bottom:0;
 }
 
 /*Sale*/
@@ -1325,6 +1371,9 @@ ul.product_list_widget li:hover img {
     box-shadow: none;
 }
 
+.woocommerce-checkout .checkout .wocommerce-error {
+    background-color: lightpink;
+}
 /*=====Media queries=====*/
 @media only screen  and (max-width : 1224px) {
 
