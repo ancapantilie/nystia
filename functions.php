@@ -251,10 +251,12 @@ add_filter( 'excerpt_length', 'nystia_excerpt_length', 9999 );
  */
 
 function nystia_scripts() {
-    if ( is_category() || is_search() || is_archive() || is_home() ) {
+//    if ( is_category() || is_search() || is_archive() || is_home() ) {
 
-        wp_enqueue_script( 'nystia-masonry-call', get_stylesheet_directory_uri() . '/js/masonry-call.js', array( 'masonry' ), '20120206', true );
-    }
+        $masonry_path = get_stylesheet_directory_uri() . '/js/masonry-call.js';
+
+        wp_enqueue_script( 'nystia-masonry-call', $masonry_path, array( 'masonry' ), '20120206', true );
+//    }
 
 }
 add_action( 'wp_enqueue_scripts', 'nystia_scripts' );

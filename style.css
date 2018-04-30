@@ -1243,7 +1243,7 @@ ul.product_list_widget li.mini_cart_item a {
 }
 
 .blog .hestia-blogs .blog-posts-wrap article.card-plain:nth-of-type(2n-1) {
-    margin-right: 30px;
+    /*margin-right: 30px;*/
 }
 .blog .hestia-blogs article .number-of-comments {
     display: none;
@@ -1257,6 +1257,15 @@ ul.product_list_widget li.mini_cart_item a {
 .blog .card-plain .author-with-avatar {
     float: left;
     display: contents;
+}
+
+.blog .blog-posts-wrap .navigation {
+    position: absolute;
+    bottom: -80px;
+}
+
+.blog .blog-posts-wrap .card-blog .card-title {
+    margin-top: 0;
 }
 
 /*=====Archives=====*/
@@ -1376,7 +1385,10 @@ ul.product_list_widget li.mini_cart_item a {
 }
 /*=====Media queries=====*/
 @media only screen  and (max-width : 1224px) {
-
+ .blog .blog-posts-wrap .navigation {
+     position: absolute;
+     bottom: -60px;
+ }
 }
 
 @media only screen  and (max-width: 992px) {
@@ -1415,7 +1427,7 @@ ul.product_list_widget li.mini_cart_item a {
 
     /*Blog page*/
     .col-md-8 {
-        margin-left: 15%;
+        /*margin-left: 15%;*/
     }
 
     .archive .hestia-blogs .card-plain .author .number-of-comments,

@@ -10,7 +10,7 @@
 ?>
 
 <article
-    id="post-<?php the_ID(); ?>" <?php ( is_sticky() && is_home() && ! is_paged() ) ? post_class( 'card card-raised card-blog col-md-4' ) : post_class( 'card card-plain card-blog col-md-4' ); ?>>
+    id="post-<?php the_ID(); ?>" <?php ( is_sticky() && is_home() && ! is_paged() ) ? post_class( 'card card-raised card-blog' ) : post_class( 'card card-plain card-blog' ); ?>>
     <div class="row">
         <?php
         $post_thumbnail_url = get_the_post_thumbnail( get_the_ID(), 'hestia-blog' );

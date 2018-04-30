@@ -4,13 +4,15 @@
  * Call Masonry.
  */
 
-jQuery(
-    function ($) {
+( function ($) {
 
+
+        $( '.blog .hestia-blogs .blog-posts-wrap .card-blog' ).addClass( 'col-md-6 col-xs-12' );
         $( window ).load(
             function() {
-                if ( $( '.blog .container ' ).length > 0 ) {
-                    $( '.container .blog-posts-wrap' ).masonry(
+                if ( $( '.blog .hestia-blogs .blog-posts-wrap' ).length > 0 ) {
+
+                    $( '.blog .hestia-blogs .blog-posts-wrap' ).masonry(
                         {
                             itemSelector: '.card-blog'
                         }
@@ -21,4 +23,5 @@ jQuery(
         );
 
     }
-);
+)( jQuery );
+
