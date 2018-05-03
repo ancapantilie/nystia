@@ -674,6 +674,7 @@ single-product.blog-post .woocommerce-message {
     width: 30px;
     height: 30px;
     display: inline-flex;
+    overflow: hidden;
 }
 
 .blog a.next.page-numbers:hover,
@@ -1354,9 +1355,14 @@ ul.product_list_widget li.mini_cart_item a {
     border-radius: 3px;
 }
 
+.archive .navigation {
+    position: absolute;
+    bottom: -80px;
+}
+
 /*=====Checkout page======*/
 .woocommerce-checkout .section-text .woocommerce-billing-fields__field-wrapper .form-row-last {
-    float: none;
+    /*float: none;*/
 }
 
 .woocommerce-checkout  .hestia-title {
@@ -1385,7 +1391,8 @@ ul.product_list_widget li.mini_cart_item a {
 }
 /*=====Media queries=====*/
 @media only screen  and (max-width : 1224px) {
- .blog .blog-posts-wrap .navigation {
+ .blog .blog-posts-wrap .navigation,
+ .archive .archive-post-wrap .navigation {
      position: absolute;
      bottom: -60px;
  }
@@ -1439,10 +1446,10 @@ ul.product_list_widget li.mini_cart_item a {
         padding-bottom: 5px;
     }
 
-    .blog .hestia-blogs article.card {
-        width: 70%;
-        margin-left: 10%;
+    .blog .hestia-blogs .blog-posts-wrap article.card-plain:nth-of-type(2n-1) {
+        margin-right: 0px;
     }
+
 
     .blog .hestia-blogs article .entry-date {
         display: unset;
@@ -1468,10 +1475,6 @@ ul.product_list_widget li.mini_cart_item a {
     .archive .hestia-blogs .card .entry-date,
     .archive .hestia-blogs .card .post-author {
         font-size: 12px;
-    }
-
-    .archive .hestia-blogs article.card {
-        width: 70%;
     }
 
 }
