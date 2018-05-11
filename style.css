@@ -72,7 +72,7 @@ Version: 1.0.0
 
 .home .hestia-features .feature-box .hestia-info p ,
 .home .hestia-features .description {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     margin: 0 0 10px;
     color: #333;
@@ -92,7 +92,7 @@ Version: 1.0.0
 }
 
 .hestia-testimonials .text-center .description {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     margin: 0 0 10px;
     color: #333;
@@ -134,9 +134,6 @@ Version: 1.0.0
     padding-right: 10px;
 }
 
-.home .hestia-testimonials-content .card-testimonial {
-    height: 200px;
-}
 /*Subscribe*/
 .home .hestia-subscribe .text-center .title {
     font-size: 36px;
@@ -294,7 +291,7 @@ Version: 1.0.0
 
 .home .hestia-shop .description,
 .home .hestia-shop .description a {
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
     margin-top:-10px;
 }
@@ -334,7 +331,7 @@ Version: 1.0.0
 }
 
 .hestia-team .text-center .description {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     margin: 0 0 10px;
     color: #333;
@@ -544,7 +541,6 @@ Version: 1.0.0
 }
 
 div.woocommerce-message {
-    padding: 15px 15px 15px 35px !important;
     margin: 0 0 3em;
 }
 
@@ -556,6 +552,32 @@ div.woocommerce-message {
 .woocommerce.single-product.woocommerce-page  .product.type-product form.cart {
     padding: 20px 0 0 0;
 }
+
+.woocommerce.single-product.woocommerce-page .product span.onsale {
+    top: 180px;
+    left: 30px;
+}
+
+.woocommerce.single-product.woocommerce-page .related.products span.onsale {
+    top:-10px;
+    left: 218px;
+}
+
+.woocommerce-page .product .summary .woocommerce-product-details__short-description p {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+}
+
+.woocommerce-page .related.products .card-product .card-title,
+.woocommerce-page .related.products .card-product .price {
+    text-align: center;
+}
+
+.woocommerce div.product form.cart .variations td.label  {
+    padding-left: 5px;
+}
+
+
 /*=====Cart Page=====*/
 /*Cart Styles*/
 .woocommerce-cart .main .blog-post h1.hestia-title {
@@ -616,7 +638,6 @@ div.woocommerce-message {
 
 .blog-post .section-text .woocommerce-message,
 .blog-post .section-text .woocommerce-message a {
-    background-color: #a30000;
     color: #ffffff;
 }
 
@@ -670,7 +691,7 @@ single-product.blog-post .woocommerce-message {
 
 .blog .next.page-numbers,
 .blog .prev.page-numbers {
-    color: #f2f2f2;
+    color: #fff;
     width: 30px;
     height: 30px;
     display: inline-flex;
@@ -949,10 +970,6 @@ ul.product_list_widget li:hover img {
     color: #333333;
 }
 
-.woocommerce  .section-text .product a {
-    font-size: 22px;
-    font-weight: 300;
-}
 
 .single-post .blog-sidebar .buttons a,
 .archive .blog-sidebar .buttons a,
@@ -1086,22 +1103,13 @@ ul.product_list_widget li.mini_cart_item a {
 .woocommerce-cart .woocommerce .woocommerce-message,
 .woocommerce .blog-post .woocommerce-message {
     text-align: center;
-    margin-left: -100%;
-    margin-right: -100%;
-}
 
-.woocommerce .blog-post .woocommerce-message a {
-    transform: translateX(-1375px);
 }
 
 .woocommerce.single-product .blog-post .col-md-12 >div[id^=product].product.type-product {
     margin-top: unset;
     box-shadow: none;
     background-color: #f0f0f0;
-}
-
-.woocommerce.wocommerce-page .section-text div.woocommerce-message {
-    padding: 20px 15px 10px 30px !important;
 }
 
 /*=====Single Post Page=====*/
@@ -1128,10 +1136,6 @@ ul.product_list_widget li.mini_cart_item a {
     line-height: 26px;
     margin: 0 0 10px;
     color: #333;
-}
-
-.blog-post .section-text p {
-    width:80%;
 }
 
 /*Removing box-shadow effect on hover*/
@@ -1212,7 +1216,7 @@ ul.product_list_widget li.mini_cart_item a {
 
 /*Shadow effect on every post*/
 .blog .main-raised {
-    background-color: #f2f2f2;
+    background-color: #fff;
 }
 
 .blog .card-plain .row {
@@ -1361,10 +1365,7 @@ ul.product_list_widget li.mini_cart_item a {
 }
 
 /*=====Checkout page======*/
-.woocommerce-checkout .section-text .woocommerce-billing-fields__field-wrapper .form-row-last {
-    /*float: none;*/
-}
-
+.woocommerce-checkout .checkout .woocommerce-billing-fields .billing_
 .woocommerce-checkout  .hestia-title {
     font-size: 28px;
     font-weight: 400;
@@ -1389,13 +1390,34 @@ ul.product_list_widget li.mini_cart_item a {
 .woocommerce-checkout .checkout .wocommerce-error {
     background-color: lightpink;
 }
+
+
 /*=====Media queries=====*/
 @media only screen  and (max-width : 1224px) {
- .blog .blog-posts-wrap .navigation,
- .archive .archive-post-wrap .navigation {
-     position: absolute;
-     bottom: -60px;
- }
+    .blog .blog-posts-wrap .navigation,
+    .archive .archive-post-wrap .navigation {
+        position: absolute;
+        bottom: -60px;
+    }
+
+    .archive .archive-post-wrap .navigation,
+    .blog .blog-posts-wrap .navigation {
+        bottom: -35px;
+    }
+
+    .archive .blog-sidebar-wrapper.col-md-offset-1,
+    .blog .blog-sidebar-wrapper.col-md-offset-1 {
+        margin-top: 30px;
+    }
+
+    .home .hestia-testimonials .card-testimonial .card-description
+    {
+        font-size: 18px;
+    }
+
+    .home .hestia-testimonials .card-testimonial .text-muted {
+        font-size: 14px;
+    }
 }
 
 @media only screen  and (max-width: 992px) {
@@ -1477,11 +1499,16 @@ ul.product_list_widget li.mini_cart_item a {
         font-size: 12px;
     }
 
+    .woocommerce.single-product.woocommerce-page .product span.onsale {
+        left: 7px;
+        top: 105px;
+    }
+
 }
 
 @media only screen and (max-width : 480px){
     /*Blog page*/
-    .blog .hestia-blogs .blog-posts-wrap article .row {
+    .blog .hestia-blogs  article.card {
         width: auto;
     }
 
@@ -1515,12 +1542,43 @@ ul.product_list_widget li.mini_cart_item a {
     .archive .hestia-blogs article.card {
         width: 90%;
     }
+
+    /*Front page*/
+    .home .hestia-ribbon .hestia-title,
+    .home .hestia-subscribe .hestia-title,
+    .home .carousel-inner .hestia-big-title-content .hestia-title {
+        font-size: 38px;
+    }
+
+    .home .hestia-subscribe .subscribe-description,
+    .home .carousel-inner .hestia-big-title-content .sub-title {
+        font-size: 16px;
+    }
+
+    .home .hestia-testimonials .hestia-title,
+    .home .hestia-features .hestia-title {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .blog .blog-posts-wrap {
+        margin-right: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 320px){
     /*Single post page*/
     .blog-post .related-posts .card-blog .blog-item-title-link {
         font-size:20px;
+    }
+
+    .blog-post .comment .media-heading small {
+        font-size: 10px;
+    }
+
+    .blog-post .section-comments .comment .media-heading {
+        font-size: 16px;
     }
 
     /*Cart page*/
@@ -1531,4 +1589,160 @@ ul.product_list_widget li.mini_cart_item a {
         overflow: visible;
     }
 
+    /*Front page*/
+    .home .hestia-ribbon .hestia-title,
+    .home .hestia-subscribe .hestia-title,
+    .home .carousel-inner .hestia-big-title-content .hestia-title {
+        font-size: 32px;
+    }
+
+    .home .hestia-subscribe .subscribe-description,
+    .home .carousel-inner .hestia-big-title-content .sub-title {
+        font-size: 16px;
+    }
+
+    .home .hestia-testimonials .hestia-title,
+    .home .hestia-features .hestia-title {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .woocommerce-page .woocommerce-Reviews .star-rating {
+        float: none;
+    }
+
+}
+
+/*Landscape iPhone 5, 5S, 5C and 5SE*/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    .woocommerce .main .woocommerce-message  {
+        margin-right: -15px;
+        text-align: right;
+    }
+
+    .woocommerce.single-product.woocommerce-page .product span.onsale {
+        left: 7px;
+        top: 180px;
+    }
+
+    .woocommerce.single-product.woocommerce-page .related.products span.onsale {
+        top: -10px;
+        left: 295px;
+    }
+
+    .home .hestia-testimonials .description,
+    .home .hestia-testimonials .card-testimonial .card-title,
+    .home .carousel.slide .sub-title,
+    .home .hestia-features .description,
+    .home .hestia-shop .description,
+    .home .hestia-team .description {
+        font-size: 16px;
+    }
+
+    .home .hestia-testimonials .hestia-title,
+    .home .carousel.slide .hestia-title,
+    .home .hestia-features .hestia-title,
+    .home .hestia-shop .hestia-title,
+    .home .hestia-team .hestia-title,
+    .home .hestia-blogs .hestia-title{
+        font-size: 34px;
+    }
+
+    .home .hestia-testimonials .card-testimonial .card-description,
+    .home .hestia-testimonials .card-testimonial .text-muted {
+        font-size: 12px;
+    }
+}
+
+/*iPhone 6, 6S, 7 and 8*/
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .woocommerce .main .woocommerce-message  {
+        margin-right: -15px;
+        text-align: right;
+    }
+
+    .woocommerce.single-product.woocommerce-page .product span.onsale {
+        left: 15px;
+        top: 190px;
+    }
+
+    .woocommerce.single-product.woocommerce-page .related.products span.onsale {
+        top: -10px;
+        left: 295px;
+    }
+}
+
+/*iPhone 6+, 7+ and 8+ */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .woocommerce .main .woocommerce-message  {
+        margin-right: -15px;
+        text-align: right;
+    }
+
+    .woocommerce.single-product.woocommerce-page .product span.onsale {
+        left: 15px;
+        top: 190px;
+    }
+
+    .woocommerce.single-product.woocommerce-page .related.products span.onsale {
+        top: -10px;
+        left: 295px;
+    }
+}
+
+/* iPhone X */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .woocommerce .main .woocommerce-message  {
+        margin-right: unset;
+        margin-left: unset;
+    }
+
+    .woocommerce.single-product.woocommerce-page .product span.onsale {
+        left: 15px;
+        top: 190px;
+    }
+
+    .woocommerce.single-product.woocommerce-page .related.products span.onsale {
+        top: -10px;
+        left: 295px;
+    }
+}
+
+/*Pixel*/
+@media only screen and (min-width: 731px) and (orientation: landscape) {
+    .home .hestia-testimonials .description,
+    .home .hestia-testimonials .card-testimonial .card-title,
+    .home .carousel.slide .sub-title,
+    .home .hestia-features .description,
+    .home .hestia-shop .description,
+    .home .hestia-team .description {
+        font-size: 16px;
+    }
+
+    .home .hestia-testimonials .hestia-title,
+    .home .carousel.slide .hestia-title,
+    .home .hestia-features .hestia-title,
+    .home .hestia-shop .hestia-title,
+    .home .hestia-team .hestia-title,
+    .home .hestia-blogs .hestia-title{
+        font-size: 34px;
+    }
+
+    .home .hestia-testimonials .card-testimonial .card-description,
+    .home .hestia-testimonials .card-testimonial .text-muted {
+        font-size: 12px;
+    }
 }
