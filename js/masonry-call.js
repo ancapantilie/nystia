@@ -6,7 +6,6 @@
 
 ( function ($) {
 
-
         $( '.blog .hestia-blogs .blog-posts-wrap .card-blog' ).addClass( 'col-md-6 col-xs-12' );
         $( '.archive .hestia-blogs .archive-post-wrap .card-blog' ).addClass( 'col-md-6 col-xs-12' );
         $( window ).load(

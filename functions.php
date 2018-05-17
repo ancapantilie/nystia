@@ -101,12 +101,17 @@ function nystia_inline_style() {
 
     if ( ! empty( $color_accent ) ) {
 
+
         /* Pricing section */
-        $custom_css .= '.hestia-pricing .hestia-table-one .card-pricing .category { color: ' . esc_html( $color_accent ) . '; }';
-        $custom_css .= '.hestia-pricing .hestia-table-two .card-pricing { background-color: ' . esc_html( $color_accent ) . '; }';
+        $custom_css .= '.hestia-pricing .hestia-table-one a.btn.btn-primary { color: ' . esc_html( $color_accent ) . '; background-color: #fff;}';
 
         /* Categories */
         $custom_css .= '.entry-categories .label { background-color: ' . esc_html( $color_accent ) . ';}';
+        $custom_css .= '.authors-on-blog .card-profile .card-title { color: ' . esc_html( $color_accent ) . ';}';
+
+
+        /* Tags*/
+        $custom_css .= '.entry-tags .entry-tag { color:' . esc_html( $color_accent ) . ';}';
 
         /* Shop Sidebar Rating*/
         $custom_css .= '.woocommerce .star-rating { color: ' . esc_html( $color_accent ) . '; }';

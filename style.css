@@ -2,7 +2,7 @@
 Theme Name: Nystia
 Description: //TODO
 Author: Anca Pantilie
-Template: hestia
+Template: hestia-pro
 Version: 1.0.0
 */
 
@@ -43,6 +43,18 @@ Version: 1.0.0
     margin: 0 0 10px;
 }
 
+.home .hestia-features .feature-box:nth-child(1) .icon{
+    background: linear-gradient(to bottom, #ffb33b 0%, #ff5221 100%);
+}
+
+.home .hestia-features .feature-box:nth-child(2) .icon{
+    background: linear-gradient(to bottom, #45c0fd 0%, #4091ff 100%);
+}
+
+.home .hestia-features .feature-box:nth-child(3) .icon{
+    background: linear-gradient(to bottom,  #ffb199 0%,  #ff0844 100%);
+ }
+
 .home .hestia-features .feature-box .icon {
     display: inline-block;
     background-color: goldenrod;
@@ -82,6 +94,117 @@ Version: 1.0.0
     transform: none;
 }
 
+/*Pricing*/
+.home .hestia-pricing .hestia-title {
+    font-weight: 400;
+    color: #333;
+    line-height:1;
+}
+
+.home .hestia-pricing .text-gray {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.home .hestia-pricing .hestia-table-two .card-pricing {
+    background: #ffffff;
+}
+
+.home .hestia-pricing .card-title,
+.home .hestia-pricing .card-title small {
+    font-weight: 300;
+    color: #333;
+}
+
+.home .hestia-pricing ul li b {
+    color: #333;
+}
+
+.home .hestia-pricing .hestia-table-one .btn {
+    border: 1px solid;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+
+.home .hestia-pricing .hestia-table-two .btn {
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.home .hestia-pricing .hestia-table-two .card-pricing {
+    box-shadow:
+            0 16px 38px -12px rgba(0, 0, 0, 0.56),
+            0 4px 25px 0 rgba(0, 0, 0, 0.12),
+            0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.home .hestia-pricing .card-pricing .btn-primary:active {
+    box-shadow: none;
+}
+
+/* Authors section*/
+.blog .authors-on-blog .card .card-image {
+    border: 5px solid #EEEEEE;
+    border-radius: 50%;
+    width: 124px;
+    height: 124px;
+}
+
+ /*.authors-on-blog .card.card-profile div.col-md-5 {*/
+    /*float: none;*/
+/*}*/
+
+ .blog .authors-on-blog .col-ms-6.col-sm-6 {
+     width: 50%;
+ }
+ 
+ .authors-on-blog .card-profile .content {
+     text-align: center;
+ }
+
+ .authors-on-blog .card-profile .col-md-7 {
+     width: unset;
+     float: none;
+ }
+
+.authors-on-blog .card.card-profile .col-md-5,
+.authors-on-blog .card.card-profile .card-image {
+    margin: 0 auto;
+    float: none;
+}
+
+.authors-on-blog .card .card-description,
+.authors-on-blog .card .category {
+    color: #fff;
+}
+
+/* Subscribe line*/
+.subscribe-line .hestia-title {
+    font-weight: 400;
+    line-height: 40px;
+    color: #333;
+}
+
+.subscribe-line .description {
+    line-height: 20px;
+    margin: 0 0 10px;
+}
+
+.slide .page-header .buttons a.btn:hover {
+    box-shadow: none;
+}
+
+.carousel .buttons a {
+    padding: 17px 60px;
+}
+/* Slider */
+.slide .page-header .hestia-title,
+.slide .page-header .hestia-sub-title {
+    font-weight: 300;
+}
+
+.
 /* Testimonials */
 .hestia-testimonials .text-center .hestia-title {
     font-size: 36px;
@@ -554,7 +677,7 @@ div.woocommerce-message {
 }
 
 .woocommerce.single-product.woocommerce-page .product span.onsale {
-    top: 180px;
+    top:  85px;
     left: 30px;
 }
 
@@ -836,6 +959,14 @@ single-product.blog-post .woocommerce-message {
             0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
+.woocommerce .card-product .footer .stats {
+    display: inline !important;
+    margin-right: -45px;
+}
+
+.woocommerce .product.sale .card-product .footer .stats {
+    margin-right: 5px;
+}
 /*Shop sidebar*/
 .woocommerce-page .shop-sidebar-wrapper .shop-sidebar {
     background: #f0f0f0;
@@ -1022,7 +1153,6 @@ ul.product_list_widget li.mini_cart_item a {
 .blog-post input[type="submit"] {
     box-shadow: none;
     -webkit-box-shadow: none;
-    margin:-25px 10px;
 }
 
 .blog-post .btn-primary.pull-right:hover,
@@ -1106,6 +1236,19 @@ ul.product_list_widget li.mini_cart_item a {
 
 }
 
+.woocommerce-cart .section-text .woocommerce-message:before,
+.woocommerce-page .section-text .woocommerce-message:before {
+    display: none;
+}
+
+/*Not enough pieces left in the stock*/
+.woocommerce.woocommerce-page .woocommerce-error a.button {
+    background-color: #cc3300;
+}
+.woocommerce .woocommerce-message .button,
+.woocommerce-page .woocommerce-message .button {
+    float: none;
+}
 .woocommerce.single-product .blog-post .col-md-12 >div[id^=product].product.type-product {
     margin-top: unset;
     box-shadow: none;
@@ -1171,7 +1314,7 @@ ul.product_list_widget li.mini_cart_item a {
     font-size: 11px;
     margin-bottom: 3px;
     padding: 3px 9px 3px;
-    border: 1px solid #b4dbc0;
+    border: 1px solid ;
     border-radius: 3px;
 }
 
@@ -1247,9 +1390,7 @@ ul.product_list_widget li.mini_cart_item a {
     width:47%;
 }
 
-.blog .hestia-blogs .blog-posts-wrap article.card-plain:nth-of-type(2n-1) {
-    /*margin-right: 30px;*/
-}
+
 .blog .hestia-blogs article .number-of-comments {
     display: none;
 }
@@ -1290,6 +1431,8 @@ ul.product_list_widget li.mini_cart_item a {
 .archive .hestia-blogs article .avatar-category {
     display: none;
 }
+
+
 
 /*Font styles*/
 .archive .archive-post-wrap article .card-title {
@@ -1565,6 +1708,20 @@ ul.product_list_widget li.mini_cart_item a {
         margin-right: 10px;
     }
 
+    .authors-on-blog .card-title
+    {
+        font-size: 14px;
+    }
+
+    .authors-on-blog .category {
+        font-size: 11px;
+    }
+
+    .blog .authors-on-blog .card .card-image {
+        width: 100px;
+        height: 100px;
+    }
+
 }
 
 @media only screen and (max-width: 320px){
@@ -1744,5 +1901,29 @@ and (-webkit-min-device-pixel-ratio: 3) {
     .home .hestia-testimonials .card-testimonial .card-description,
     .home .hestia-testimonials .card-testimonial .text-muted {
         font-size: 12px;
+    }
+}
+
+@media only screen
+and (-webkit-min-device-pixel-ratio: 1.77)
+and (orientation:landscape) {
+    .blog .hestia-blogs .blog-posts-wrap article.card-plain:nth-of-type(2n-1) {
+        margin-right: 0;
+    }
+
+    .woocommerce.single-product.woocommerce-page .related.products span.onsale{
+        left:300px;
+    }
+
+    .woocommerce.single-product.woocommerce-page .product span.onsale {
+        top: 85px;
+    }
+}
+
+@media only screen
+and (-webkit-min-device-pixel-ratio: 1.77)
+and (orientation:portrait) {
+    .woocommerce.single-product.woocommerce-page .product span.onsale {
+        top: 85px;
     }
 }
